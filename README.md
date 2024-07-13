@@ -11,6 +11,9 @@ Explore my evolving skill set, noteworthy achievements and professional certific
 
 ---
 ## Achievements 
+ - SPOT award
+ - academic award
+ - 
 
---- 
+
 ## Projects
