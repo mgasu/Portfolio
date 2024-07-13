@@ -1,4 +1,4 @@
-# Welcome to Maria's portfolio, I'm so happy you're here! 🤓
+# Welcome to Maria's Portfolio, I'm So Happy You're Here! 🤓
 
 Dive into my world of data-driven discoveries! This portfolio showcases my journey into data, featuring projects that blend academic rigor with creative problem-solving. From classroom challenges to personal passions, each entry reflects my growing expertise in turing raw data into actionable insights. 
 
@@ -9,4 +9,8 @@ Explore my evolving skill set, noteworthy achievements and professional certific
 **LinkedIn** https://www.linkedin.com/in/maria-garcia-3b10a1266/
 
 
+---
+## Achievements 
 
+--- 
+## Projects
