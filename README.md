@@ -1,4 +1,4 @@
-# Welcome to Maria's Portfolio, I'm So Happy You're Here! 🤓
+# Welcome, I'm So Happy You're Here! 🤓
 
 Dive into my world of data-driven discoveries! This portfolio showcases my journey into data, featuring projects that blend academic rigor with creative problem-solving. From classroom challenges to personal passions, each entry reflects my growing expertise in turning raw data into actionable insights. 
 
