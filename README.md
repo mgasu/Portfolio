@@ -8,11 +8,6 @@ Explore my evolving skill set, noteworthy achievements and professional certific
 
 **LinkedIn** https://www.linkedin.com/in/methodicalmaria
 
----
-## Achievements 
- - SPOT award
- - academic award
- - 
-
-
 ## Projects
+
+### Money Diaries Analysis 
