@@ -8,6 +8,10 @@ Explore my evolving skill set, noteworthy achievements and professional certific
 
 **LinkedIn** https://www.linkedin.com/in/methodicalmaria
 
-## Projects
+---
+## Personal Projects   
 
-### Money Diaries Analysis 
+
+| Project Name      | Description | Tools/Skills Used |
+| :----:      |    :----:   |   :----:      |
+| Money Diaries      | Refinery29's "Money Diary" series features first-hand accounts from individuals detailing their personal financial information and spending habits. In this project, I have developed a web scraper to extract the raw, unformatted data from these published diaries. I then transform and clean the data before completing a thorough quantitative analysis, enabling deeper insights into the financial lives of the featured diarists.      | Python, Jupyter, Tableau, Webscraping, EDA, Transforming unformatted data, cleaning data, data visualization, quantitative analysis  |
