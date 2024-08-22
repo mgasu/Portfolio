@@ -1,0 +1,222 @@
+---
+title: "Lab2 - Maria Garcia"
+output: pdf_document
+date: "2024-05-31"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, library_install, echo=TRUE}
+library(ggplot2movies)
+data(movies)
+#str(movies)
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(reshape2)
+```
+
+1. What is the range of years of production of the movies of this data set (i.e. what is the year of production of the oldest movie and of the most recent movie in this data set)?
+
+```{r, q1, eval = TRUE}
+
+oldestYear <- min(movies$year, na.rm = TRUE)
+newestYear <- max(movies$year, na.rm = TRUE)
+
+cat("ANSWER: The range of years is from", oldestYear, " to ", newestYear, ".\n")
+
+```
+
+2. What proportion of movies have their budget included in this data base, and what proportion doesn’t? What are top 5 most expensive movies in this data set?
+
+```{r, q2, eval= TRUE}
+
+totalMovies <- nrow(movies)
+withBudget <- sum(!is.na(movies$budget))
+withoutBudget <- sum(is.na(movies$budget))
+
+proportionWithBudget <- withBudget / totalMovies
+proportionWithBudget <- sprintf("%.2f%%", proportionWithBudget * 100)
+
+proportionWithout <- withoutBudget / totalMovies
+proportionWithout <- sprintf("%.2f%%", proportionWithout * 100)
+
+#cat("ANSWER: \n")
+cat("There are ", withBudget, "movies with budget infomation, ", proportionWithBudget, " of the total. \n")
+cat("There are ", withoutBudget, " movies without budget ", proportionWithout, " of the total\n")
+
+top5Expensive <- movies[order(-movies$budget), ][1:5, ]
+cat("The 5 most expensive movies:\n")
+print(top5Expensive[, c("title", "budget")])
+
+```
+
+
+
+3. What are top 5 longest movies?
+
+```{r, q3, eval = TRUE}
+
+top5LongestMovies <- movies[order(-movies$length), ][1:5, ]
+
+cat("The top 5 longest movies are: \n")
+print(top5LongestMovies[, c("title", "length")])
+
+```
+
+4. Of all short movies, which one is the shortest (in minutes)? Which one is the longest? How long are the shortest and the longest short movies?
+
+```{r, q4, eval = TRUE}
+
+shortMovies <- subset(movies, Short == 1)
+
+shorest <- shortMovies[which.min(shortMovies$length), ]
+longestShort <- shortMovies[which.max(shortMovies$length), ]
+
+cat("The shortest short movie: \n")
+print(shorest[, c("title", "length")])
+cat("\nThe longest short movie:\n")
+print(longestShort[, c("title", "length")])
+
+
+```
+
+5. How many movies of each genre (action, animation, comedy, drama, documentary, romance, short) are there in this data base? (use a bar plot)
+
+```{r, q5, eval = TRUE}
+
+genreCol <- c("Action", "Animation", "Comedy", "Drama", "Documentary", "Romance", "Short")
+genreCount <- colSums(movies[, genreCol])
+
+genreCount_DF <- data.frame(Genre = names(genreCount), Count = genreCount)
+
+ggplot(genreCount_DF, aes(x = Genre, y = Count)) + 
+  geom_bar(stat = "identity", fill = "darkgreen") +
+  labs(title = "Number of Movies by Genre", x = "Genre", y = "Number of Movies") +
+  theme_minimal()
+
+
+```
+
+6. What is the average rating of all movies within each genre? (use a bar plot)
+
+```{r, q6, eval = TRUE}
+
+genreCol <- c("Action", "Animation", "Comedy", "Drama", "Documentary", "Romance")
+ratingCol <- "rating"
+
+moviesDF <- melt(movies, id.vars = ratingCol, measure.vars = genreCol)
+moviesDF <- moviesDF %>% filter(value == 1) %>% select(-value)
+
+avgRatings <- moviesDF %>%
+  group_by(variable) %>%
+  summarize(avg_rating = mean(get(ratingCol), na.rm = TRUE)) %>%
+  rename(Genre = variable)
+
+ggplot(avgRatings, aes(x = Genre, y = avg_rating)) +
+  geom_bar(stat = "identity", fill = "lightblue") +
+  labs(title = "Average Rating of Movies by Genre", x = "Genre", y = "Average Rating") +
+  theme_minimal()
+
+
+```
+
+7. What is the average rating of all movies within each genre that were produced in the years 2000-2005?
+
+
+```{r, q7, eval = TRUE}
+
+yearCol <- "year"
+
+filteredMovies <- movies %>% filter(year >= 2000 & year <= 2005)
+
+avgRating2000_2005 <- data.frame(Genre = genreCol, Avg_Rating = numeric(length(genreCol)))
+
+for (genre in genreCol) {
+  avgRating2000_2005[avgRating2000_2005$Genre == genre, "Avg_Rating"] <- mean(filteredMovies[filteredMovies[[genre]] == 1, ][[ratingCol]], na.rm = TRUE)
+}
+
+
+ggplot(avgRating2000_2005, aes(x = Genre, y = Avg_Rating)) +
+  geom_bar(stat = "identity", fill = "darkorange") +
+  labs(title = "Average Rating of Movies by Genre (2000-2005)", x = "Genre", y = "Average Rating") +
+  theme_minimal()
+
+```
+
+
+8. For each of the first 6 genres (not including short movies) consider only movies from 1990 until the last year recorded and plot a function of the number of movies in this data base of corresponding genre produced by year, for years from 1990 until the last year recorded. For each of the 6 genres you should have one curve, and plot all the curves in the same figure. Naturally, use different colors, and appropriate legend.
+
+
+```{r, q8, eval=TRUE}
+
+genreCol <- c("Action", "Animation", "Comedy", "Drama", "Documentary", "Romance")
+year_column <- "year"
+filtered_movies <- movies %>% filter(year >= 1990)
+
+movies_by_year <- filtered_movies %>%
+  select(one_of(c(year_column, genreCol))) %>%
+  pivot_longer(cols = genreCol, names_to = "Genre", values_to = "Value") %>%
+  filter(Value == 1) %>%
+  group_by(year, Genre) %>%
+  summarise(Count = n()) %>%
+  ungroup()
+
+
+ggplot(movies_by_year, aes(x = year, y = Count, color = Genre)) +
+  geom_line(size = 1) +
+  labs(title = "Number of Movies Produced by Year for Each Genre (1990 - 2005)",
+       x = "Year", y = "Number of Movies") +
+  theme_minimal() +
+  theme(legend.title = element_blank())
+
+```
+
+
+9.1 What is the distrobution of movie ratings? 
+
+```{r, q9.1, eval=TRUE}
+
+ggplot(movies, aes(x = rating)) +
+  geom_histogram(binwidth = 0.5, fill = "maroon", color = "black") +
+  labs(title = "Distribution of Movie Ratings", x = "Rating", y = "Frequency") +
+  theme_minimal()
+
+```
+
+9.2 How many movies were produced each year? 
+
+```{r, q9.2, eval=TRUE}
+
+movies_by_year <- movies %>%
+  group_by(year) %>%
+  summarise(Count = n())
+
+ggplot(movies_by_year, aes(x = year, y = Count)) +
+  geom_line(color = "magenta", size = 1) +
+  geom_point(color = "magenta", size = 2) +
+  labs(title = "Number of Movies Produced Each Year", x = "Year", y = "Number of Movies") +
+  theme_minimal()
+
+
+```
+
+9.3 What is the trend of average movie ratings over the years? 
+
+```{r, q9.3, eval=TRUE}
+
+avg_rating_by_year <- movies %>%
+  group_by(year) %>%
+  summarise(Avg_Rating = mean(rating, na.rm = TRUE))
+
+
+ggplot(avg_rating_by_year, aes(x = year, y = Avg_Rating)) +
+  geom_line(color = "purple", size = 1) +
+  labs(title = "Trend of Average Movie Ratings Over the Years", x = "Year", y = "Average Rating") +
+  theme_minimal()
+
+```
+
