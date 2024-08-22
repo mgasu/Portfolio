@@ -23,8 +23,8 @@ Explore my evolving skill set, noteworthy achievements and professional certific
 
 | Coursework   | Description | Tools/Skills Used |
 | :----:      |    :----:   |   :----:      |
-| Operating Systems | Multiple projects executed in Linux on structure and services, processor scheduling, concurrent processes, synchronization techniques, memory management, virtual memory, input/output, storage management, and file systems | c++, Linux, VirtualEnv | 
-| General Data Science Coursework | EDA projects using text data, spatial data, and time series data using various statistical techniques to gain insight into the structure of the data, including graphical visualization, linear regression, trees and clustering. | Jupyter, Python, R, Statistical Modeling, A/B tests, Regression, Time Series Analysis, EDA |
+| [Operating Systems](https://github.com/mgasu/Portfolio/tree/main/Academic_Projects/Operating_Systems) | Multiple projects executed in Linux on structure and services, processor scheduling, concurrent processes, synchronization techniques, memory management, virtual memory, input/output, storage management, and file systems | c++, Linux, VirtualEnv | 
+| [General Data Science Coursework](https://github.com/mgasu/Portfolio/tree/main/Academic_Projects/Data_Science_Coursework) | EDA projects using text data, spatial data, and time series data using various statistical techniques to gain insight into the structure of the data, including graphical visualization, linear regression, trees and clustering. | Jupyter, Python, R, Statistical Modeling, A/B tests, Regression, Time Series Analysis, EDA |
 
 
 
