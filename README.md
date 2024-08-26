@@ -14,7 +14,7 @@ Explore my evolving skill set, noteworthy achievements and professional certific
 
 | Project     | Description | Tools/Skills Used |
 | :----:      |    :----:   |   :----:      |
-| ![image](https://github.com/user-attachments/assets/4b59bbb9-8c7d-4a05-895d-efa344c8e453) [ *Money Diaries*](https://github.com/mgasu/Portfolio/tree/main/Money_Diaries) | Refinery29's "Money Diary" series features first-hand accounts from individuals detailing their personal financial information and spending habits. In this project, I have developed a web scraper to extract the raw, unformatted data from these published diaries. I then transform and clean the data before completing a thorough quantitative analysis, enabling deeper insights into the financial lives of the featured diarists.      | Python, Jupyter, Tableau, Webscraping, EDA, Transforming unformatted data, cleaning data, data visualization, quantitative analysis  |
+| ![image](https://github.com/user-attachments/assets/4b59bbb9-8c7d-4a05-895d-efa344c8e453) [ *Money Diaries*](https://github.com/mgasu/Portfolio/tree/main/Money_Diaries) | Refinery29's "Money Diary" series features first-hand accounts from individuals detailing their personal financial information and spending habits. In this project, I have developed a web scraper to extract the raw, unformatted data from these published diaries. I then transform and clean the data before completing a thorough quantitative analysis, enabling deeper insights into the financial lives of the featured diarists.      | Data Mining, Python, Jupyter, Tableau, Webscraping, EDA, Transforming unformatted data, cleaning data, data visualization, quantitative analysis  |
 
 
 ---
