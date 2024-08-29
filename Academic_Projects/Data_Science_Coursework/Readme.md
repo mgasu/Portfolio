@@ -3,6 +3,6 @@
 
 | Project | Description | Skills Used | 
 | ----------- | ----------- |----------- |
-| Waze EDA | Exploratory analysis on customer retention based on anonymized waze driver data | R, Rslides, EDA, Data Preprocessing, A/B Testing, Logistic Regression, Modeling | 
+| [Waze EDA](https://github.com/mgasu/Portfolio/tree/main/Academic_Projects/Data_Science_Coursework/Waze%20EDA%20(R)) | Exploratory analysis on customer retention based on anonymized waze driver data | R, Rslides, EDA, Data Preprocessing, A/B Testing, Logistic Regression, Modeling | 
 | Stats Visualization | Shiny App (R) which visualizes how basic statistics such as standard deviation change when the imput parameters change, simulation of various probability distributions | R, Shiny, probability distrobutions, statistics, generating interactive visuals |
 | Modeling Data | 
