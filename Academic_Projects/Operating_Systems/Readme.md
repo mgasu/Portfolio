@@ -1,8 +1,7 @@
 # Operating Systems 
 
-## Skills Displayed: 
-- Memory management
-- Multi-threading
-- Producer/Consumer resolve
-- Virtual Environements
-- Linux/Unix
+| Project | Description | Skills Displayed | 
+| ----------- | ----------- | ----------- |
+| Process Management | Implemented a new kernel module to calculate the total elapsed time of all the processes that belong to a given user in the system The producer and the consumer are kernel threads. The producer searches the system for all the processes that belong to a given user and adds the process information to the shared buffer. The consumer removes the processes from the buffer, collects the elapsed time of these processes, and outputs the total elapsed time in the kernel log. | C++, Process Management, Concurrency Control, Inter-Process Communication (IPC), Kernel Programming, Linux/Unix Systems, Command Line, Algorithm Design | 
+| Memory Management | Implemented new kernel functions to reveal the “magic” that the kernel does to virtualize memories | C++, Virtualization, Memory Management, Virtual Address Translation, Kernel Programming, Command Line | 
+| File System Management | This project involves working with the Virtual Filesystem (VFS) in the Linux kernel, specifically focusing on the /proc filesystem. I created a custom /proc filesystem and defined read and write operations for its entries. | Virtual Filesystems (VFS), File System Management, Kernel Data Structures, Linux Kernel Internals, Command Line, Testing Custom Filesystems, System Calls, Algorithm Design |
