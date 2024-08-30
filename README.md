@@ -24,6 +24,7 @@ Dive into my world of data-driven discoveries! This portfolio showcases my journ
 | :----:      |    :----:   |   :----:      |
 | [Operating Systems](https://github.com/mgasu/Portfolio/tree/main/Academic_Projects/Operating_Systems) | Multiple projects executed in Linux on structure and services, processor scheduling, concurrent processes, synchronization techniques, memory management, virtual memory, input/output, storage management, and file systems | c++, Linux, VirtualEnv | 
 | [General Data Science Coursework](https://github.com/mgasu/Portfolio/tree/main/Academic_Projects/Data_Science_Coursework) | EDA projects using text data, spatial data, and time series data using various statistical techniques to gain insight into the structure of the data, including graphical visualization, linear regression, trees and clustering. | Jupyter, Python, R, Statistical Modeling, A/B tests, Regression, Time Series Analysis, EDA |
+| Data Structures and Algorithims | Advanced data structures and algorithms, including stacks, queues, trees (B, B+, AVL), and graphs. Searching for graphs, hashing, external sorting. | Regex, Algorithim creation and implementation, code efficiency, time and space complexity |  
 
 
 
