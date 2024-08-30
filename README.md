@@ -1,4 +1,4 @@
-# Welcome, I'm So Happy You're Here! 🤓
+# Welcome to Methodical Maria's Portfolio 🤓
 
 Dive into my world of data-driven discoveries! This portfolio showcases my journey into data, featuring projects that blend academic rigor with creative problem-solving. Each entry reflects my growing expertise in turning raw data into actionable insights, and a little piece of my personality. 
 
