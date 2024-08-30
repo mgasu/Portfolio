@@ -9,4 +9,4 @@ Using a dataset from Kindle, A/B testing is done to determine which ad is more c
 
 ## Outcomes: 
 *In Progress* 
-- There is a significant difference in the cost effectiveness of each ad 
+- There is a significant difference in the cost effectiveness of each ad, based on two-proportion z-test
