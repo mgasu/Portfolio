@@ -23,6 +23,7 @@ their income across various expenses.
 
 ## Outcomes 
 - Average Income Across the US: ~$84k
+- Average Age of Respondents: 28 years
 - Average Spend as percentage of Yearly Income: 1.15% (or ~$750)
 - Rent/Mortgage Spending as Percentage of Income: 36% (the general rule rings TRUE!) 
 - Industry Insights: The most common industry among respondents was identified as Tech, indicating a potential trend in the financial habits of individuals within this sector. Respondents in this category on average had a higher salary than respondents not in Tech. 
