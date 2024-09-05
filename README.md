@@ -1,4 +1,4 @@
-# Methodical Maria's Portfolio
+# Methodical Maria's Portfolio ✅
 
 This portfolio showcases my journey into data, featuring projects that blend academic rigor with creative problem-solving. Each entry reflects my expertise in turning raw data into actionable insights, and a little piece of my personality. 
 
